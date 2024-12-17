@@ -1,52 +1,53 @@
-package test.java.com.lunoxx.tp_automatisation;
+package com.lunoxx.tp_automatisation;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-import main.java.com.lunoxx.tp_automatisation.Calculator;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class CalculatorTest extends TestCase {
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-    Calculator c = new Calculator();
+public class CalculatorTest {
 
-    public CalculatorTest( String testName )
-    {
-        super( testName );
+    Calculator c;
+
+    @BeforeEach
+    void setUp() {
+        c = new Calculator();
     }
 
-    public void AdditionTest(Double a, Double b) {
-        Double additionResultat = c.addition(2, 3);
-        assertEquals(5, additionResultat, "Le résultat de l'addition 2+3 doit être égal à 5");
-
-        resultat = c.addition(15, 20);
-        assertEquals(35, additionResultat, "Le résultat de l'addition 15 + 20 doit être égal à 35");
+    @ParameterizedTest
+    @CsvSource({"15.0, 20.0", "10.0, 5.0"})
+    public void AddTest(Double a, Double b) {
+        Double addResult = c.add(a, b);
+        assertEquals(a + b, addResult, "Le résultat de l'addition doit être égal à a + b");
     }
 
-    public void SoustractionTest(Double a, Double b) {
-        Double soustractionResultat = c.soustraction(10, 5);
-        assertEquals(5, soustractionResultat, "Le résultat de la soustraction 10 - 5 doit être égal à 5");
-
-        soustractionResultat = c.soustraction(18, 2);
-        assertEquals(16, soustractionResultat, "Le résultat de la soustraction 18 - 2 doit être égal à 16");
+    @ParameterizedTest
+    @CsvSource({"18.0, 2.0", "20.0, 10.0"})
+    public void SubtractTest(Double a, Double b) {
+        Double subtractResult = c.subtract(a, b);
+        assertEquals(a - b, subtractResult, "Le résultat de la soustraction doit être égal à a - b");
     }
 
-    public void DivisionTest(Double a, Double b) {
-        Double divisionResultat = c.division(10, 2);
-        assertEquals(5, divisionResultat, "Le résultat de la division 10 / 2 doit être égal à 5");
-
-        divisionResultat = c.division(16, 4);
-        assertEquals(4, divisionResultat, "Le résultat de la division 16 / 4 doit être égal à 4");
+    @ParameterizedTest
+    @CsvSource({"16.0, 4.0", "20.0, 5.0"})
+    public void DivideTest(Double a, Double b) {
+        Double divideResult = c.divide(a, b);
+        assertEquals(a / b, divideResult, "Le résultat de la division doit être égal à a / b");
     }
 
-    public void MultiplicationTest(Double a, Double b) {
-        Double multiplicationResultat = c.multiplication(10, 2);
-        assertEquals(20, multiplicationResultat, "Le résultat de la multiplication 10 * 2 doit être égal à 20");
-
-        multiplicationResultat = c.multiplication(7, 3);
-        assertEquals(21, multiplicationResultat, "Le résultat de la multiplication 7 * 3 doit être égal à 21");
+    @ParameterizedTest
+    @CsvSource({"7.0, 3.0", "10.0, 5.0"})
+    public void MultiplyTest(Double a, Double b) {
+        Double multiplyResult = c.multiply(a, b);
+        assertEquals(a * b, multiplyResult, "Le résultat de la multiplication doit être égal à a * b");
     }
 
-    public void DivisionParZero() {
-        assertThrows(ArithmeticException.class, () -> c.division(1, 0), "La division par zéro n'est pas possible");
+    @ParameterizedTest
+    @CsvSource({"1.0, 0.0"})
+    public void DivideByZero(Double a, Double b) {
+        assertThrows(ArithmeticException.class, () -> c.divide(a, b), 
+                    "La division par zéro n'est pas possible");
     }
 }

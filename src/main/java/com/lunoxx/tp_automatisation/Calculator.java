@@ -1,21 +1,24 @@
-package main.java.com.lunoxx.tp_automatisation;
+package com.lunoxx.tp_automatisation;
 
 public class Calculator {
     public Calculator() {};
     
-    public double addition(Double a, Double b) {
+    public double add(Double a, Double b) {
         return a + b;
     }
 
-    public double soustraction(Double a, Double b) {
+    public double subtract(Double a, Double b) {
         return a - b;
     }
 
-    public double multiplication(Double a, Double b) {
+    public double multiply(Double a, Double b) {
         return a * b;
     }
 
-    public double division(Double a, Double b) {
+    public double divide(double a, double b) {
+        if (b == 0.0) {
+            throw new ArithmeticException("La division par zéro n'est pas possible");
+        }
         return a / b;
-    }
+    } 
 }
