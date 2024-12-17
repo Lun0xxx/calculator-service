@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.lunoxx.tp_automatisation.AppTest" time="0.014" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.lunoxx.tp_automatisation.AppTest" time="0.018" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/lunoxx/Documents/Université/Semestre 5/Automatisation/tp_automatisation/target/surefire/surefirebooter2787637522726853713.jar /Users/lunoxx/Documents/Université/Semestre 5/Automatisation/tp_automatisation/target/surefire 2024-12-17T13-29-50_285-jvmRun1 surefire16989787603279532235tmp surefire_017172737506610305203tmp"/>
+    <property name="sun.java.command" value="/Users/lunoxx/Documents/Université/Semestre 5/Automatisation/tp_automatisation/target/surefire/surefirebooter8505775579926098479.jar /Users/lunoxx/Documents/Université/Semestre 5/Automatisation/tp_automatisation/target/surefire 2024-12-17T14-48-48_243-jvmRun1 surefire681307229423586828tmp surefire_0875612763740112151tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/lunoxx/Documents/Université/Semestre 5/Automatisation/tp_automatisation/target/test-classes:/Users/lunoxx/Documents/Université/Semestre 5/Automatisation/tp_automatisation/target/classes:/Users/lunoxx/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/lunoxx/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/lunoxx/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/lunoxx/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/lunoxx/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/lunoxx/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/lunoxx/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/lunoxx/Documents/Université/Semestre 5/Automatisation/tp_automatisation/target/surefire/surefirebooter2787637522726853713.jar"/>
+    <property name="surefire.real.class.path" value="/Users/lunoxx/Documents/Université/Semestre 5/Automatisation/tp_automatisation/target/surefire/surefirebooter8505775579926098479.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="23.0.1"/>
