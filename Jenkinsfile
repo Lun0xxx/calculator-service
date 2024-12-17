@@ -20,5 +20,19 @@ pipeline {
                 }
             }
         }
+
+        stage('Quality Gate Check') {
+            steps {
+                script {
+                    def qualityGate = waitForQualityGate()
+
+                    if (qualityGate.status != 'OK') {
+                        error "Quality Gate failed: ${qualityGate.status}"
+                    } else {
+                        echo "Quality Gate passed"
+                    }
+                }
+            }
+        }
     }
 }
